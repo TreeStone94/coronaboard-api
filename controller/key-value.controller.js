@@ -16,7 +16,7 @@ get = async (req, res) => {
 }
 
 insertOrUpdate = async (req, res) => {
-    const {key, value} = req.params;
+    const {key, value} = req.body;
     if (!key || !value) {
         res.status(400).json({error: 'key and value are required'});
         return;
